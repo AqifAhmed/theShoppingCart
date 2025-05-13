@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 60px;
+}
+.heroSection {
+    height: 300px;
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.name {
+    color: white;
+}
+.heroSection h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+.productsSection {
+    padding: 30px 20px;
+    text-align: center;
+}
+.productsSection h2 {
+    margin-bottom: 25px;
+}
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+.product img {
+    max-width: 50%;
+    height: auto;
+}
+.product h3 {
+    margin: 10px 0;
+}
+.price {
+    font-weight: bold;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+.addToCart {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.addToCart:hover {
+    background-color: #555;
+}
+
+/* About Page Styles */
+.aboutSection {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.aboutSection h2 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+.aboutContent {
+    line-height: 1.6;
+}
+.aboutContent p {
+    margin-bottom: 20px;
+}
+.aboutContent h3 {
+    margin: 20px 0 15px 0;
+}
+.aboutList {
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.aboutList li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+}
+
+/* Contact Page Styles */
+.contactSection {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contactSection h2 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+.contactContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.contactForm {
+    flex: 2;
+}
+.contactInfo {
+    flex: 1;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+}
+.formGroup {
+    margin-bottom: 15px;
+}
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.formGroup input, .formGroup textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.submitBtn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.submitBtn:hover {
+    background-color: #555;
+}
+.contactInfo h3 {
+    margin-bottom: 15px;
+}
+.contactInfo p {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+@media screen and (max-width: 768px) {
+    .productGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+   
+    .heroSection {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 15px;
+        text-align: center;
+    }
+   
+    .heroSection h1 {
+        font-size: 22px;
+    }
+   
+    .heroSection img {
+        margin-top: 20px;
+        max-width: 150px;
+    }
+    
+    .contactContent {
+        flex-direction: column;
+    }
+    
+    .contactInfo {
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    #nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+   
+    #nav div {
+        margin: 5px 0;
+    }
+   
+    .productGrid {
+        grid-template-columns: 1fr;
+    }
+   
+    ul {
+        gap: 10px;
+    }
+   
+    .product {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .aboutList {
+        margin-left: 15px;
+    }
+}
